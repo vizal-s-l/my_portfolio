@@ -6,22 +6,17 @@ const AboutSection = () => {
     {
       category: 'Programming & Data',
       icon: Code,
-      items: ['Python', 'SQL', 'MySQL', 'Pandas', 'NumPy', 'Matplotlib']
-    },
-    {
-      category: 'Data Engineering',
-      icon: Database,
-      items: ['ETL Pipelines', 'AWS S3', 'Data Warehousing', 'Jupyter Lab']
+      items: ['Python', 'MySQL', 'Pandas', 'NumPy', 'Matplotlib']
     },
     {
       category: 'Analytics & BI',
       icon: Award,
-      items: ['Power BI', 'Zoho Analytics', 'Statistical Analysis', 'Data Visualization']
+      items: ['Power BI', 'Zoho Analytics']
     },
     {
       category: 'AI & Machine Learning',
       icon: Brain,
-      items: ['OpenAI APIs', 'LLMs', 'Embeddings', 'Predictive Modeling']
+      items: ['OpenAI APIs', 'LLMs', 'OpenAI Batch processing']
     }
   ];
 
@@ -38,7 +33,7 @@ const AboutSection = () => {
       ]
     },
     {
-      role: 'Software Development Intern',
+      role: 'Student Trainee',
       company: 'Bosch Global Software Technologies',
       period: 'Completed Apr 2024',
       description: 'Gained hands-on experience in software development and data processing systems.',
@@ -103,7 +98,7 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-center mb-12">
             <span className="text-gradient">Skills & Technologies</span>
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center max-w-4xl mx-auto">
             {skills.map((skillGroup, index) => {
               const IconComponent = skillGroup.icon;
               return (
