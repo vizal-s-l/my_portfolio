@@ -66,7 +66,7 @@ const Navigation = () => {
                     <a
                       href="/resume.pdf"
                       download="Vizal_S_L_Resume.pdf"
-                      className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-200"
+                      className="flex items-center space-x-2 text-foreground transition-colors duration-200"
                       onClick={handleResumeDownload}
                     >
                       <IconComponent size={18} />
@@ -77,7 +77,7 @@ const Navigation = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-200"
+                      className="flex items-center space-x-2 text-foreground transition-colors duration-200"
                     >
                       <IconComponent size={18} />
                       <span>{link.label}</span>
@@ -85,7 +85,7 @@ const Navigation = () => {
                   ) : (
                     <button
                       onClick={link.action}
-                      className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-200"
+                      className="flex items-center space-x-2 text-foreground transition-colors duration-200"
                     >
                       <IconComponent size={18} />
                       <span>{link.label}</span>
@@ -98,7 +98,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-foreground transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -117,7 +117,7 @@ const Navigation = () => {
                       <a
                         href="/resume.pdf"
                         download="Vizal_S_L_Resume.pdf"
-                        className="flex items-center space-x-3 text-foreground hover:text-primary transition-colors duration-200 py-3 px-2 rounded-lg hover:bg-card"
+                        className="flex items-center space-x-3 text-foreground transition-colors duration-200 py-3 px-2 rounded-lg"
                         onClick={(e) => {
                           handleResumeDownload(e);
                           setIsOpen(false);
@@ -131,7 +131,7 @@ const Navigation = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-3 text-foreground hover:text-primary transition-colors duration-200 py-3 px-2 rounded-lg hover:bg-card"
+                        className="flex items-center space-x-3 text-foreground transition-colors duration-200 py-3 px-2 rounded-lg"
                         onClick={() => setIsOpen(false)}
                       >
                         <IconComponent size={20} />
@@ -140,7 +140,7 @@ const Navigation = () => {
                     ) : (
                       <button
                         onClick={link.action}
-                        className="flex items-center space-x-3 text-foreground hover:text-primary transition-colors duration-200 py-3 px-2 w-full text-left rounded-lg hover:bg-card"
+                        className="flex items-center space-x-3 text-foreground transition-colors duration-200 py-3 px-2 w-full text-left rounded-lg"
                       >
                         <IconComponent size={20} />
                         <span className="font-medium">{link.label}</span>

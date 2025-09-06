@@ -98,28 +98,35 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-center mb-12">
             <span className="text-gradient">Skills & Technologies</span>
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-start gap-8 max-w-7xl mx-auto">
             {skills.map((skillGroup, index) => {
               const IconComponent = skillGroup.icon;
+              // Define different widths for each skill category
+              const widthClasses = [
+                'w-80', // Programming & Data - Widest (320px)
+                'w-64', // Analytics & BI - Medium (256px)
+                'w-72'  // AI & Machine Learning - Large (288px)
+              ];
+              
               return (
                 <div
                   key={skillGroup.category}
-                  className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2 border border-border/50 hover:border-primary/30 animate-scale-in"
+                  className={`group bg-card rounded-2xl p-8 shadow-card transition-all duration-300 border border-border/50 animate-scale-in ${widthClasses[index] || 'w-72'} min-h-[320px]`}
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="flex flex-col items-center text-center space-y-6">
-                    <div className="p-4 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                      <IconComponent className="text-primary group-hover:scale-110 transition-transform duration-300" size={48} />
+                  <div className="flex flex-col items-center text-center space-y-6 h-full">
+                    <div className="p-4 rounded-2xl bg-primary/10 transition-colors duration-300">
+                      <IconComponent className="text-primary transition-transform duration-300" size={48} />
                     </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                    <div className="flex-1 flex flex-col justify-center">
+                      <h4 className="text-xl font-bold text-card-foreground mb-4 transition-colors duration-300">
                         {skillGroup.category}
                       </h4>
                       <div className="grid gap-3">
                         {skillGroup.items.map((item, itemIndex) => (
                           <div
                             key={item}
-                            className="px-4 py-2 text-sm font-medium text-muted-foreground bg-muted/50 hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200 cursor-default border border-transparent hover:border-primary/20"
+                            className="px-4 py-2 text-sm font-medium text-muted-foreground bg-muted/50 rounded-lg transition-all duration-200 border border-transparent"
                             style={{ animationDelay: `${index * 150 + itemIndex * 50}ms` }}
                           >
                             {item}

@@ -31,19 +31,19 @@ const Index = () => {
       
       {/* Footer */}
       <footer className="bg-card border-t border-border">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Brand Section */}
-            <div className="sm:col-span-2 md:col-span-2">
+            <div className="sm:col-span-2 lg:col-span-2">
               <h3 className="text-2xl font-bold text-gradient mb-4">Vizal S L</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
+              <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed max-w-md text-sm md:text-base">
                 Data Analyst & AI Enthusiast passionate about transforming complex data into actionable insights.
                 Specializing in Python, SQL, and AI-powered analytics.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 md:space-x-4">
                 <a
                   href="mailto:vizalsl241@gmail.com"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                  className="p-3 rounded-full bg-primary/10 text-primary transition-all duration-300"
                   aria-label="Email"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -55,7 +55,7 @@ const Index = () => {
                   href="https://linkedin.com/in/vizalsl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                  className="p-3 rounded-full bg-primary/10 text-primary transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -66,7 +66,7 @@ const Index = () => {
                   href="https://github.com/vizal-s-l/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:scale-110 transition-all duration-300"
+                  className="p-3 rounded-full bg-primary/10 text-primary transition-all duration-300"
                   aria-label="GitHub"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -83,7 +83,7 @@ const Index = () => {
                 <li>
                   <button
                     onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     About
                   </button>
@@ -91,7 +91,7 @@ const Index = () => {
                 <li>
                   <button
                     onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     Projects
                   </button>
@@ -99,7 +99,7 @@ const Index = () => {
                 <li>
                   <button
                     onClick={() => document.getElementById('blogs')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     Blogs
                   </button>
@@ -107,7 +107,7 @@ const Index = () => {
                 <li>
                   <button
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     Contact
                   </button>
@@ -123,7 +123,7 @@ const Index = () => {
                   <a
                     href="/resume.pdf"
                     download="Vizal_S_L_Resume.pdf"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     Resume
                   </a>
@@ -133,7 +133,7 @@ const Index = () => {
                     href="https://linkedin.com/in/vizalsl"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     LinkedIn
                   </a>
@@ -141,7 +141,7 @@ const Index = () => {
                 <li>
                   <a
                     href="mailto:vizalsl241@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground transition-colors duration-200"
                   >
                     Email Me
                   </a>
@@ -151,18 +151,11 @@ const Index = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-border mt-12 pt-8">
-            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between items-center space-y-4 sm:space-y-0 md:space-y-4 lg:space-y-0">
-              <p className="text-muted-foreground text-sm text-center sm:text-left">
+          <div className="border-t border-border mt-8 md:mt-12 pt-6 md:pt-8">
+            <div className="text-center">
+              <p className="text-muted-foreground text-xs md:text-sm">
                 © {new Date().getFullYear()} Vizal S L. All rights reserved.
               </p>
-              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-muted-foreground text-center sm:text-left">
-                <span className="hidden sm:inline">Built with React, TypeScript & Tailwind CSS</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>Available for opportunities</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

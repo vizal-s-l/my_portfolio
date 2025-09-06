@@ -111,10 +111,10 @@ const ContactSection = () => {
                     href={contact.href}
                     {...(contact.download ? { download: contact.download } : {})}
                     {...(!contact.download && contact.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="flex items-center space-x-4 p-4 rounded-lg bg-card shadow-card hover:shadow-card-hover transition-all duration-300 group"
+                    className="flex items-center space-x-4 p-4 rounded-lg bg-card shadow-card transition-all duration-300"
                     onClick={contact.download ? handleResumeDownload : undefined}
                   >
-                    <div className="p-3 rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition-transform duration-200">
+                    <div className="p-3 rounded-full bg-primary text-primary-foreground transition-transform duration-200">
                       <IconComponent size={20} />
                     </div>
                     <div>

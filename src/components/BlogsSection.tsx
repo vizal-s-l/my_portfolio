@@ -83,7 +83,7 @@ const BlogsSection = () => {
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
-          {blogPosts.map((post, index) => (
+          {blogPosts.slice(0, 8).map((post, index) => (
             <div
               key={post.id}
               className="project-card p-6 animate-scale-in"
@@ -123,10 +123,10 @@ const BlogsSection = () => {
                   href={post.mediumUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-1 text-primary font-medium text-sm hover:underline group"
+                  className="inline-flex items-center space-x-1 text-primary font-medium text-sm underline"
                 >
                   <span>Read on Medium</span>
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight size={14} className="transition-transform duration-200" />
                 </a>
               </div>
             </div>
