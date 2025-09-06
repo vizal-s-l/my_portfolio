@@ -23,56 +23,74 @@ const ProjectsSection = () => {
 
   const projects: Project[] = [
     {
-      id: 'healthcare-ai',
-      title: 'Healthcare AI Analytics Dashboard',
-      year: '2024',
-      description: 'AI-powered analytics dashboard for healthcare data processing and predictive modeling.',
-      longDescription: 'Built a comprehensive healthcare analytics platform using Python, integrating OpenAI APIs for data cleaning and analysis. Features real-time dashboards, predictive modeling for patient outcomes, and automated ETL pipelines processing 100K+ records daily.',
-      tags: ['Python', 'AI', 'Healthcare', 'ETL'],
-      type: 'Professional',
-      status: 'Completed',
-      links: {
-        demo: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 'llm-embeddings',
-      title: 'LLM Text Embeddings System',
-      year: '2024',
-      description: 'Advanced text embedding system using large language models for semantic search and analysis.',
-      longDescription: 'Developed a sophisticated text embedding pipeline using OpenAI and custom LLMs. Implemented semantic search capabilities with 95% accuracy, processing diverse document types and enabling intelligent content discovery.',
-      tags: ['LLM', 'AI', 'Python', 'Embeddings'],
+      id: 'review-sentiment',
+      title: 'Review Sentiment Analysis Tool',
+      year: '2025',
+      description: 'Hybrid sentiment analyzer with VADER, TextBlob, GPT.',
+      longDescription: 'Developed a sentiment classification tool using multiple NLP engines, including OpenAI GPT, to provide granular sentiment insights across ecommerce reviews.',
+      tags: ['Python', 'AI'],
       type: 'Personal',
       status: 'Completed',
       links: {
-        github: '#',
-        medium: '#'
+        github: 'https://github.com/vizal-s-l/review_sentiment_analyser'
       }
     },
     {
-      id: 'etl-automation',
-      title: 'Automated ETL Pipeline',
-      year: '2024',
-      description: 'Scalable ETL pipeline for processing multi-source data with AWS S3 integration.',
-      longDescription: 'Designed and implemented a robust ETL system handling data from multiple sources including MySQL, APIs, and flat files. Automated data validation, transformation, and loading processes with comprehensive error handling and monitoring.',
-      tags: ['Python', 'ETL', 'AWS', 'MySQL'],
-      type: 'Professional',
-      status: 'Completed'
+      id: 'gsheet-ecom-reviews',
+      title: 'Ecommerce Google Spreadsheet Integration',
+      year: '2025',
+      description: 'Automated Python pipeline for cleaning and reporting Google Sheets data.',
+      longDescription: 'Built a Python data pipeline that extracts, cleans, and aggregates ecommerce data from Google Sheets. Results are written back into new tabs for seamless reporting and analysis.',
+      tags: ['Python', 'Analytics','Google Sheets API'],
+      type: 'Personal',
+      status: 'Completed',
+      links: {
+        github: 'https://github.com/vizal-s-l/googlespreadsheet_ecom_data'
+      }
     },
     {
-      id: 'predictive-analytics',
-      title: 'Customer Behavior Prediction Model',
+      id: 'movie-pipeline',
+      title: 'Movie Insights Analytics Pipeline',
       year: '2024',
-      description: 'Machine learning model for predicting customer behavior patterns and churn analysis.',
-      longDescription: 'Built predictive models using Python and scikit-learn to analyze customer behavior patterns. Achieved 87% accuracy in churn prediction, enabling proactive customer retention strategies and improved business outcomes.',
-      tags: ['Python', 'ML', 'Analytics', 'Side Project'],
+      description: 'Movie raw data transformed into insights.',
+      longDescription: 'Built an end-to-end data pipeline with SQL and Python, transforming raw movie ratings into user behavior and trend insights with rich visualizations.',
+      tags: ['Python', 'Matplotlib', 'Pandas'],
       type: 'Personal',
-      status: 'In Progress'
+      status: 'Completed',
+      links: {
+        github: 'https://github.com/vizal-s-l/movie-insights-pipeline'
+      }
+
+    },
+    {
+      id: 'stock-value-fetcher',
+      title: 'Real-Time Stock Data Value Fetcher',
+      year: '2024',
+      description: 'Fetching real time stock value and updating it in MySQL Database.',
+      longDescription: 'Designed a pipeline that extracts live stock data, stores it in MySQL, and visualizes IT sector stock trends in Jupyter Notebooks.',
+      tags: ['Python', 'MySQL', 'Analytics', 'yahoofinance'],
+      type: 'Personal',
+      status: 'In Progress',
+      links: {
+        github: 'https://github.com/vizal-s-l/stock-pipeline'
+      }
+    },
+    {
+      id: 'personal-finance',
+      title: 'Personal Finance Management System',
+      year: '2024',
+      description: 'Finance tracker with MySQL and Python analysis.',
+      longDescription: 'Designed a finance management system with structured MySQL database and Python visualizations, enabling insights into savings trends and spending patterns.',
+      tags: ['Python', 'MySQL', 'Pandas', 'Matplotlib'],
+      type: 'Personal',
+      status: 'Completed',
+      links: {
+        github: 'https://github.com/vizal-s-l/finance-management'
+      }
     }
   ];
 
-  const filters = ['All', 'Python', 'LLM', 'AI', 'Healthcare', 'Personal', 'Side Project', 'ETL'];
+  const filters = ['All', 'Python', 'AI'];
 
   const filteredProjects = selectedFilter === 'All' 
     ? projects 
@@ -89,7 +107,7 @@ const ProjectsSection = () => {
             <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects I've worked on in analytics, AI, and data engineering.
+            A selection of projects I've worked on in data analytics.
           </p>
         </div>
 
@@ -102,7 +120,7 @@ const ProjectsSection = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedFilter === filter
                   ? 'bg-primary text-primary-foreground shadow-md'
-                  : 'bg-card text-card-foreground hover:bg-card-hover border border-border'
+                  : 'bg-card text-card-foreground border border-border'
               }`}
             >
               <Tag size={14} className="inline mr-1" />
@@ -161,15 +179,15 @@ const ProjectsSection = () => {
 
               {/* CTA */}
               <div className="flex justify-between items-center pt-4 border-t border-border">
-                <button className="text-primary font-medium text-sm hover:underline">
+                <button className="text-primary font-medium text-sm underline">
                   Know More
                 </button>
                 <div className="flex space-x-2">
                   {project.links?.github && (
-                    <Github size={16} className="text-muted-foreground hover:text-primary cursor-pointer" />
+                    <Github size={16} className="text-muted-foreground cursor-pointer" />
                   )}
                   {project.links?.demo && (
-                    <ExternalLink size={16} className="text-muted-foreground hover:text-primary cursor-pointer" />
+                    <ExternalLink size={16} className="text-muted-foreground cursor-pointer" />
                   )}
                 </div>
               </div>
@@ -187,7 +205,7 @@ const ProjectsSection = () => {
                 </h3>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-muted-foreground hover:text-foreground p-1 rounded-lg hover:bg-muted/50 flex-shrink-0"
+                  className="text-muted-foreground p-1 rounded-lg flex-shrink-0"
                 >
                   ✕
                 </button>

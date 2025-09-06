@@ -37,7 +37,7 @@ const Index = () => {
             <div className="sm:col-span-2 lg:col-span-2">
               <h3 className="text-2xl font-bold text-gradient mb-4">Vizal S L</h3>
               <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed max-w-md text-sm md:text-base">
-                Data Analyst & AI Enthusiast passionate about transforming complex data into actionable insights.
+                Data Analyst about transforming complex data into actionable insights.
                 Specializing in Python, SQL, and AI-powered analytics.
               </p>
               <div className="flex space-x-3 md:space-x-4">

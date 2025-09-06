@@ -11,62 +11,63 @@ interface BlogPost {
 }
 
 const BlogsSection = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 'ai-healthcare-analytics',
-      title: 'Transforming Healthcare with AI-Powered Analytics',
-      summary: 'Exploring how artificial intelligence is revolutionizing healthcare data analysis and improving patient outcomes through predictive modeling.',
-      publishDate: '2024-12-15',
-      readTime: '8 min read',
-      mediumUrl: '#',
-      category: 'AI & Healthcare'
-    },
-    {
-      id: 'llm-embeddings-guide',
-      title: 'A Complete Guide to LLM Text Embeddings',
-      summary: 'Deep dive into large language model embeddings, their applications in semantic search, and practical implementation strategies.',
-      publishDate: '2024-11-28',
-      readTime: '12 min read',
-      mediumUrl: '#',
-      category: 'Machine Learning'
-    },
-    {
-      id: 'etl-best-practices',
-      title: 'Modern ETL Pipeline Best Practices with Python',
-      summary: 'Learn how to build scalable, maintainable ETL pipelines using Python, with real-world examples and performance optimization techniques.',
-      publishDate: '2024-11-10',
-      readTime: '10 min read',
-      mediumUrl: '#',
-      category: 'Data Engineering'
-    },
-    {
-      id: 'data-analyst-journey',
-      title: 'My Journey from Engineering to Data Analytics',
-      summary: 'Personal insights and lessons learned transitioning from electrical engineering to data analytics, including skills development and career advice.',
-      publishDate: '2024-10-22',
-      readTime: '6 min read',
-      mediumUrl: '#',
-      category: 'Career'
-    },
-    {
-      id: 'predictive-modeling-tips',
-      title: 'Essential Tips for Effective Predictive Modeling',
-      summary: 'Practical guide to building robust predictive models, from data preparation to model validation and deployment strategies.',
-      publishDate: '2024-10-05',
-      readTime: '9 min read',
-      mediumUrl: '#',
-      category: 'Data Science'
-    },
-    {
-      id: 'zoho-analytics-insights',
-      title: 'Maximizing Business Intelligence with Zoho Analytics',
-      summary: 'How to leverage Zoho Analytics for comprehensive business intelligence, including advanced features and integration strategies.',
-      publishDate: '2024-09-18',
-      readTime: '7 min read',
-      mediumUrl: '#',
-      category: 'Business Intelligence'
-    }
-  ];
+  // TODO: Uncomment and populate with actual blog posts when available on Medium
+  // const blogPosts: BlogPost[] = [
+  //   {
+  //     id: 'ai-healthcare-analytics',
+  //     title: 'Transforming Healthcare with AI-Powered Analytics',
+  //     summary: 'Exploring how artificial intelligence is revolutionizing healthcare data analysis and improving patient outcomes through predictive modeling.',
+  //     publishDate: '2024-12-15',
+  //     readTime: '8 min read',
+  //     mediumUrl: '#',
+  //     category: 'AI & Healthcare'
+  //   },
+  //   {
+  //     id: 'llm-embeddings-guide',
+  //     title: 'A Complete Guide to LLM Text Embeddings',
+  //     summary: 'Deep dive into large language model embeddings, their applications in semantic search, and practical implementation strategies.',
+  //     publishDate: '2024-11-28',
+  //     readTime: '12 min read',
+  //     mediumUrl: '#',
+  //     category: 'Machine Learning'
+  //   },
+  //   {
+  //     id: 'etl-best-practices',
+  //     title: 'Modern ETL Pipeline Best Practices with Python',
+  //     summary: 'Learn how to build scalable, maintainable ETL pipelines using Python, with real-world examples and performance optimization techniques.',
+  //     publishDate: '2024-11-10',
+  //     readTime: '10 min read',
+  //     mediumUrl: '#',
+  //     category: 'Data Engineering'
+  //   },
+  //   {
+  //     id: 'data-analyst-journey',
+  //     title: 'My Journey from Engineering to Data Analytics',
+  //     summary: 'Personal insights and lessons learned transitioning from electrical engineering to data analytics, including skills development and career advice.',
+  //     publishDate: '2024-10-22',
+  //     readTime: '6 min read',
+  //     mediumUrl: '#',
+  //     category: 'Career'
+  //   },
+  //   {
+  //     id: 'predictive-modeling-tips',
+  //     title: 'Essential Tips for Effective Predictive Modeling',
+  //     summary: 'Practical guide to building robust predictive models, from data preparation to model validation and deployment strategies.',
+  //     publishDate: '2024-10-05',
+  //     readTime: '9 min read',
+  //     mediumUrl: '#',
+  //     category: 'Data Science'
+  //   },
+  //   {
+  //     id: 'zoho-analytics-insights',
+  //     title: 'Maximizing Business Intelligence with Zoho Analytics',
+  //     summary: 'How to leverage Zoho Analytics for comprehensive business intelligence, including advanced features and integration strategies.',
+  //     publishDate: '2024-09-18',
+  //     readTime: '7 min read',
+  //     mediumUrl: '#',
+  //     category: 'Business Intelligence'
+  //   }
+  // ];
 
   return (
     <section id="blogs" className="py-20 bg-background">
@@ -77,19 +78,47 @@ const BlogsSection = () => {
             <span className="text-gradient">Blogs</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Insights, case studies, and learnings shared on Medium. Exploring the intersection of data, AI, and business impact.
+            Coming Soon! I'll be sharing insights, case studies, and learnings on Medium. 
+            Stay tuned for content exploring the intersection of data, AI, and business impact.
           </p>
         </div>
 
+        {/* Placeholder Content */}
+        <div className="text-center py-16">
+          <div className="max-w-md mx-auto">
+            <div className="bg-card rounded-lg p-8 shadow-card">
+              <div className="text-muted-foreground mb-4">
+                <ExternalLink size={48} className="mx-auto mb-4" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                Blog Posts Coming Soon
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                I'm currently working on creating valuable content about data analytics, 
+                AI, and machine learning. Check back soon for my first posts!
+              </p>
+              <a
+                href="https://medium.com/@vizalsl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline inline-flex items-center space-x-2"
+              >
+                <ExternalLink size={18} />
+                <span>Follow on Medium</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* TODO: Uncomment when blog posts are available */}
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
+        {/* <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
           {blogPosts.slice(0, 8).map((post, index) => (
             <div
               key={post.id}
               className="project-card p-6 animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Category Badge */}
               <div className="flex justify-between items-start mb-4">
                 <span className="px-3 py-1 text-xs font-semibold rounded-full bg-accent text-accent-foreground">
                   {post.category}
@@ -104,7 +133,6 @@ const BlogsSection = () => {
                 </div>
               </div>
 
-              {/* Blog Content */}
               <h3 className="text-xl font-semibold mb-3 text-card-foreground line-clamp-2">
                 {post.title}
               </h3>
@@ -113,7 +141,6 @@ const BlogsSection = () => {
                 {post.summary}
               </p>
 
-              {/* Meta Info */}
               <div className="flex justify-between items-center pt-4 border-t border-border">
                 <span className="text-xs text-muted-foreground">
                   {post.readTime}
@@ -131,10 +158,11 @@ const BlogsSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
+        {/* TODO: Uncomment when blog posts are available */}
         {/* View All Blogs CTA */}
-        <div className="text-center animate-fade-in">
+        {/* <div className="text-center animate-fade-in">
           <a
             href="https://medium.com/@vizalsl"
             target="_blank"
@@ -144,7 +172,7 @@ const BlogsSection = () => {
             <ExternalLink size={18} />
             <span>View All Posts on Medium</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

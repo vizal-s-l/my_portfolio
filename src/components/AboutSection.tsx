@@ -23,22 +23,22 @@ const AboutSection = () => {
   const experience = [
     {
       role: 'Data Analyst',
-      company: 'Cx360',
+      company: 'Cx360 Degrees Pvt Ltd',
       period: 'Jan 2025 – Present',
-      description: 'Developing ETL processes, predictive modeling, and AI-powered analytics using Python, SQL, MySQL, Jupyter Lab, Zoho Analytics, and AWS S3.',
+      description: 'Developing ETL processes, AI-powered analytics using Python, MySQL, Jupyter Lab, Zoho Analytics, and AWS S3.',
       achievements: [
-        'Built automated ETL pipelines processing 100K+ records daily',
-        'Implemented AI-powered data cleaning with 95% accuracy improvement',
-        'Created predictive models achieving 87% accuracy in business forecasting'
+        'Built ETL pipelines processing 100K+ records weekly',
+        'Creating Customer insights using OpenaI APIs',
+        'Created predictive models achieving 90% accuracy in business forecasting'
       ]
     },
     {
       role: 'Student Trainee',
-      company: 'Bosch Global Software Technologies',
+      company: 'Bosch Global Software Technologies-Bangalore',
       period: 'Completed Apr 2024',
-      description: 'Gained hands-on experience in software development and data processing systems.',
+      description: 'Gained hands-on experience in software development for firmware',
       achievements: [
-        'Contributed to enterprise-level software solutions',
+        'Contributed to POC Board testings',
         'Learned industry best practices for code quality and testing',
         'Collaborated on cross-functional development teams'
       ]
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 <span className="text-gradient">About Me</span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate Data Analyst with a background in Electrical and Electronics Engineering. 
+                I'm a Data Analyst with a background in Electrical and Electronics Engineering. 
                 Currently working at Cx360, I specialize in transforming complex data into actionable insights 
                 through Python, SQL, and advanced analytics tools.
               </p>

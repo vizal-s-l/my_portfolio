@@ -28,10 +28,10 @@ const HeroSection = () => {
                 <span className="text-gradient">Vizal S L</span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-muted-foreground">
-                Data Analyst & AI Enthusiast
+                Data Analyst 
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl">
-                Turning data into insights | Exploring AI-powered analytics | Future Data Scientist
+                Turning data into insights | Python & SQL 
               </p>
             </div>
 
